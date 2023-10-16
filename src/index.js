@@ -1,1 +1,3 @@
-console.log('initial test');
+import { startWebpage } from "./homepage.js";
+
+startWebpage();

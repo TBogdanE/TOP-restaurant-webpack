@@ -1,1 +1,1 @@
-console.log("initial test");
+(()=>{"use strict";console.log("Started")})();
