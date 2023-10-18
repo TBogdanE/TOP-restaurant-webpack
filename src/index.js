@@ -1,3 +1,4 @@
-import { startWebpage } from "./homepage.js";
+import './design.css';
+import { startWebpage } from "./webpage.js";
 
 startWebpage();
