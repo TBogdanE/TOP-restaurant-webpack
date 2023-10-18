@@ -1,5 +1,5 @@
 //import { updatePageMenu } from "./menupage.js";
-//import { updatePageContact } from "./contactpage.js";
+//import { updatePageHome } from "./homepage.js";
 
 function createHeader() {
   const header = document.createElement("header");
@@ -16,15 +16,25 @@ function createNavBar() {
   navbar.id = "navbar";
 
   const navBtnHome = document.createElement("button");
-  navBtnHome.classList.add("navBtn");
+  navBtnHome.classList.add('navBtn', 'active');
   navBtnHome.textContent = "Home";
   addEventListener("click", (e) => {
-    if (e.target.classList.contains("active")) return;
+    if (e.target.classList.contains('active')) return;
     setBtnActive(navBtnHome);
-    loadHomePage();
+    updatePageHome();
+  });
+
+  const navBtnMenu = document.createElement("button");
+  navBtnMenu.classList.add("navBtn");
+  navBtnMenu.textContent = "Menu";
+  addEventListener('click', (e) => {
+    if(e.target.classList('active')) return;
+    setBtnActive(navBtnMenu);
+    updatePageMenu();
   });
 
   navbar.appendChild(navBtnHome);
+  navbar.appendChild(navBtnMenu);
 
   return navbar;
 }
